@@ -7,7 +7,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: #f4f7f9;
+  background-color: #f0edeb;
   color: #333;
   padding: 20px;
 }
@@ -37,7 +37,7 @@ h1 {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
-  background-color: #eaf4ff;
+  background-color: #07f070;
   padding: 15px;
   border-radius: 10px;
   font-weight: bold;
@@ -189,4 +189,50 @@ form input[type="number"] {
   .form-actions button {
     flex: 1;
   }
+}
+/* Dark Mode */
+
+body.dark {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.dark .container {
+  background-color: #051935;
+}
+
+body.dark h1{
+  color: rgb(250, 147, 11);
+}
+body.dark .summary {
+  background-color: rgb(5, 5, 5);
+  color: #e0e0e0;
+}
+
+body.dark input,
+body.dark .entry,
+body.dark form {
+  color: #0e0c0c;
+  border-color: #050505;
+}
+
+body.dark .type-selection{
+  color: white
+}
+body.dark .entry.income {
+  background-color: #335533;
+  color: white;
+}
+
+body.dark .entry.expense {
+  background-color: #552222;
+  color: white;
+}
+
+body.dark .entry button {
+  color: #90cdf4;
+}
+
+body.dark .entry button.delete {
+  color: #f87171;
 }

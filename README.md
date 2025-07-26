@@ -59,15 +59,6 @@ income-expense-calculator/
 
 ---
 
-## 📌 Future Enhancements (Optional Ideas)
-
-- Add category tags (Food, Bills, Salary, etc.)
-- Use charts to visualize spending
-- Export data to CSV or PDF
-- Dark/light theme toggle
-
----
-
 ## 📃 License
 
 This project is open-source and free to use.

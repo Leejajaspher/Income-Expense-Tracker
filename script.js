@@ -132,3 +132,19 @@ function updateLocalStorage() {
 
 // Initial render
 renderEntries();
+
+// Dark Mode Toggle
+const toggle = document.getElementById('dark-toggle');
+toggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+});
+
+// Load preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const isDark = JSON.parse(localStorage.getItem('darkMode'));
+  if (isDark) {
+    document.body.classList.add('dark');
+    toggle.checked = true;
+  }
+});
