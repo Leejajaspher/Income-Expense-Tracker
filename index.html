@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Income Expense Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Income Expense Calculator</h1>
+
+    <!-- Summary Section -->
+    <section class="summary">
+      <div>Total Income: ₹<span id="total-income">0</span></div>
+      <div>Total Expense: ₹<span id="total-expense">0</span></div>
+      <div>Balance: ₹<span id="net-balance">0</span></div>
+    </section>
+
+    <!-- Input Form -->
+    <form id="entry-form">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required min="0">
+
+      <!-- Entry Type -->
+      <div class="type-selection">
+        <label><input type="radio" name="type" value="income" required> Income</label>
+        <label><input type="radio" name="type" value="expense" required> Expense</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="submit-btn">Add Entry</button>
+        <button type="button" id="reset-btn">Reset</button>
+      </div>
+    </form>
+
+    <!-- Filter Options -->
+    <section class="filters">
+      <label><input type="radio" name="filter" value="all" checked> All</label>
+      <label><input type="radio" name="filter" value="income"> Income</label>
+      <label><input type="radio" name="filter" value="expense"> Expense</label>
+    </section>
+
+    <!-- Entries List -->
+    <section class="entries-list" id="entries-list">
+      <!-- Entries will be dynamically inserted here -->
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 

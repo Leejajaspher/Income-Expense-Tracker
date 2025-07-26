@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077cc;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #eaf4ff;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.type-selection {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submit-btn {
+  background-color: #0077cc;
+  color: white;
+}
+
+#reset-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-left: 6px solid;
+  border-radius: 8px;
+}
+
+.entry.income {
+  border-left-color: #28a745;
+  background-color: #eafaf1;
+}
+
+.entry.expense {
+  border-left-color: #dc3545;
+  background-color: #fcebea;
+}
+
+.entry .details {
+  flex: 1;
+}
+
+.entry .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.entry button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.entry button.delete {
+  color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .type-selection {
+    flex-direction: column;
+  }
+}
