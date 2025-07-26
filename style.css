@@ -12,23 +12,28 @@ body {
   padding: 20px;
 }
 
+/* Container */
 .container {
   max-width: 600px;
   margin: auto;
   background-color: #fff;
   border-radius: 10px;
-  padding: 30px;
+  padding: 30px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading */
 h1 {
   text-align: center;
   margin-bottom: 30px;
   color: #0077cc;
+  font-size: 1.8rem;
 }
 
+/* Summary Section */
 .summary {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
@@ -36,8 +41,14 @@ h1 {
   padding: 15px;
   border-radius: 10px;
   font-weight: bold;
+  text-align: center;
 }
 
+.summary div {
+  flex: 1 1 30%;
+}
+
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -47,29 +58,42 @@ form {
 
 form input[type="text"],
 form input[type="number"] {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
 }
 
+/* Type Selection */
 .type-selection {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
   font-weight: 500;
 }
 
+.type-selection label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Form Buttons */
 .form-actions {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .form-actions button {
-  flex: 1;
-  padding: 10px;
+  flex: 1 1 48%;
+  padding: 12px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 #submit-btn {
@@ -82,27 +106,37 @@ form input[type="number"] {
   color: #333;
 }
 
+/* Filters */
 .filters {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+.filters label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Entries List */
 .entries-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* Individual Entry */
 .entry {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 12px;
   border: 1px solid #ddd;
   border-left: 6px solid;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .entry.income {
@@ -116,11 +150,13 @@ form input[type="number"] {
 }
 
 .entry .details {
-  flex: 1;
+  margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .entry .actions {
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
 }
 
@@ -130,24 +166,27 @@ form input[type="number"] {
   cursor: pointer;
   color: #0077cc;
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .entry button.delete {
   color: #dc3545;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .summary {
-    flex-direction: column;
-    text-align: center;
+/* Responsive Tweaks */
+@media (min-width: 601px) {
+  .entry {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .form-actions {
-    flex-direction: column;
+  .entry .details {
+    margin-bottom: 0;
+    flex: 1;
   }
 
-  .type-selection {
-    flex-direction: column;
+  .form-actions button {
+    flex: 1;
   }
 }
